@@ -653,6 +653,10 @@ abbr[title] {
   gap: 1.5rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -702,6 +706,10 @@ abbr[title] {
 
 .p-6 {
   padding: 1.5rem;
+}
+
+.font-suit {
+  font-family: "SUIT Variable", "sans-serif";
 }
 
 .text-2xl {
@@ -770,11 +778,29 @@ abbr[title] {
   color: #bbaf83;
 }
 
-.text-pesto-900 {
-  color: #1c180a;
+/* base 스타일 재구성 */
+
+body {
+  background: #0f172a;
 }
 
-/* base 스타일 재구성 */
+@media (min-width: 640px) {
+  body {
+    background: #334155;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    background: #64748b;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: #e2e8f0;
+  }
+}
 
 /* 스타일 재사용 */
 
@@ -956,6 +982,17 @@ abbr[title] {
   .md\:bg-purple-200 {
     --tw-bg-opacity: 1;
     background-color: rgb(233 213 255 / var(--tw-bg-opacity));
+  }
+}
+
+@media (min-width: 1600px) {
+  .\33xl\:border {
+    border-width: 1px;
+  }
+
+  .\33xl\:border-red-700 {
+    --tw-border-opacity: 1;
+    border-color: rgb(185 28 28 / var(--tw-border-opacity));
   }
 }
 
