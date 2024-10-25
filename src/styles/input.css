@@ -23,13 +23,7 @@
 
 @layer components {
   .button {
-    @apply px-4
-	    py-2
-	    rounded-lg
-	    bg-slate-700
-	    text-slate-100
-	    dark:bg-slate-200
-	    dark:text-slate-800;
+    @apply rounded-lg bg-slate-700 px-4 py-2 text-slate-100 dark:bg-slate-200 dark:text-slate-800;
   }
 }
 
@@ -91,33 +85,33 @@
 }
 
 body {
-  background: theme("colors.slate.900");
+  background: theme('colors.slate.900');
 }
 
 @media screen(sm) {
   body {
-    background: theme("colors.slate.700");
+    background: theme('colors.slate.700');
   }
 }
 
 @media screen(md) {
   body {
-    background: theme("colors.slate.500");
+    background: theme('colors.slate.500');
   }
 }
 
 @media screen(lg) {
   body {
-    background: theme("colors.slate.200");
+    background: theme('colors.slate.200');
   }
 }
 
 /* 스타일 재사용 */
 .avatar-card {
-  @apply w-[290px] bg-white flex flex-col md:grid md:grid-cols-[120px_1fr] md:w-[500px] gap-6 p-6 rounded-2xl shadow-2xl;
+  @apply flex w-[290px] flex-col gap-6 rounded-2xl bg-white p-6 shadow-2xl md:grid md:w-[500px] md:grid-cols-[120px_1fr];
 
   .avatar-card__img {
-    @apply hover:border-4 hover:border-solid hover:border-purple-500 w-24 h-24 self-center rounded-full;
+    @apply h-24 w-24 self-center rounded-full hover:border-4 hover:border-solid hover:border-purple-500;
   }
 
   .avatar-card__caption {
@@ -132,7 +126,26 @@ body {
     }
 
     a {
-      @apply text-cyan-600 focus:outline-none focus:ring-2 focus:ring-yellow-700 focus:ring-offset-2 focus:rounded-sm active:text-red-500 font-bold inline-block;
+      @apply inline-block font-bold text-cyan-600 focus:rounded-sm focus:outline-none focus:ring-2 focus:ring-yellow-700 focus:ring-offset-2 active:text-red-500;
     }
+  }
+}
+
+.state-button {
+  @apply relative size-24 rounded-full bg-[url(/src/assets/face/face3.jpg)] bg-cover bg-center bg-no-repeat;
+
+  .state-text {
+    @apply absolute bottom-0 right-0 size-6 rounded-full border-2 border-white;
+  }
+}
+
+.state-online {
+  .state-text {
+    @apply bg-Green-600;
+  }
+}
+.state-offline {
+  .state-text {
+    @apply bg-Gray-600;
   }
 }
